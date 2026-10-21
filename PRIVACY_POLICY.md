@@ -7,7 +7,7 @@
 
 ## Русский
 
-**Дата вступления в силу:** 14 октября 2026 г.
+**Дата вступления в силу:** 20 октября 2026 г.
 
 Настоящая Политика конфиденциальности описывает, как мобильное приложение **moneai** (далее — «Приложение») обращается с вашей информацией. Мы исходим из простого принципа: **ваши финансовые данные принадлежат только вам и остаются на вашем устройстве.**
 
@@ -30,7 +30,10 @@
 - **Категории и бюджеты** — названия, лимиты, периоды.
 - **Цели накоплений** — названия, целевые и накопленные суммы, сроки.
 - **Счета к оплате и подписки** — названия, суммы, даты платежей, настройки напоминаний.
+- **Вклады и инвестиции** — условия вкладов (ставки, сроки, начисления), активы, сделки и цены, которые вы вводите сами.
+- **Курсы валют** — курсы, которые вы задаёте сами или которые запоминаются из введённых сумм. Курсы и цены не загружаются из интернета.
 - **Долги и займы** — сумма, сроки возврата и **имя человека**, которому вы дали или у которого взяли деньги. Пожалуйста, вносите данные других людей только в объёме, необходимом для личного учёта.
+- **Картинки для категорий и счетов** — изображения, которые вы сами выбираете в «Фото» или «Файлах». Приложение получает доступ только к выбранному изображению, хранит его на устройстве в уменьшенном виде и включает в резервную копию JSON.
 - **Настройки** — валюта, тема оформления, порядок вкладок, иконка приложения, параметры напоминаний и безопасности.
 
 Мы не имеем доступа к этим данным, не собираем и не обрабатываем их.
@@ -46,14 +49,15 @@
 Используются для блокировки Приложения. Биометрическая проверка полностью выполняется системой iOS — Приложение **не получает и не хранит** ваши биометрические данные, а лишь узнаёт результат проверки (успешно / неуспешно). Код-пароль Приложения хранится в защищённой связке ключей iOS (Keychain) на устройстве.
 
 **Уведомления.**
-Используются для локальных напоминаний о платежах, долгах и превышении бюджета. Уведомления формируются и планируются на самом устройстве; никакие push-серверы не используются.
+Используются для локальных напоминаний о платежах, долгах и окончании срока вкладов, а также для предупреждений, когда расходы достигают 80% бюджета или лимита категории и когда бюджет превышен. Уведомления формируются и планируются на самом устройстве; никакие push-серверы не используются.
 
 ### 4. Системные службы Apple
 
 Для некоторых функций Приложение использует стандартные службы операционной системы, предоставляемые Apple:
 
 - **Определение названия места (обратное геокодирование).** Чтобы показать название места по координатам транзакции, iOS отправляет координаты в службу геокодирования Apple. Это происходит только при включённой опции сохранения местоположения.
-- **Apple Карты.** Если вы нажмёте на место транзакции, координаты будут открыты в приложении «Карты».
+- **Мини-карта в карточке транзакции.** Если у транзакции сохранено местоположение, Приложение показывает небольшую карту с помощью MapKit. Для её отображения iOS загружает у Apple фрагменты карты для области вокруг этих координат.
+- **Apple Карты.** Если вы нажмёте «Открыть в Картах», координаты будут открыты в приложении «Карты».
 - **Резервные копии устройства.** Если на устройстве включено резервное копирование iCloud или через компьютер, данные Приложения могут попасть в такую резервную копию в соответствии с настройками вашего устройства.
 
 Обработка данных этими службами регулируется [Политикой конфиденциальности Apple](https://www.apple.com/legal/privacy/).
@@ -69,7 +73,7 @@
 Данные хранятся на устройстве, пока вы их не удалите. Вы можете:
 
 - удалять отдельные записи (транзакции, счета, категории, цели, долги и т. д.) внутри Приложения;
-- удалить **все** данные, удалив Приложение с устройства.
+- удалить **все** данные, удалив Приложение с устройства. Код-пароль хранится в связке ключей iOS, которая может сохраниться после удаления Приложения; при повторной установке Приложение автоматически удаляет его при первом запуске.
 
 Поскольку мы не храним ваши данные, мы не можем восстановить их в случае утраты. Рекомендуем регулярно создавать резервные копии.
 
@@ -93,7 +97,7 @@
 
 ## English
 
-**Effective date:** October 14, 2026
+**Effective date:** October 20, 2026
 
 This Privacy Policy explains how the **moneai** mobile application (the "App") handles your information. Our principle is simple: **your financial data belongs to you and stays on your device.**
 
@@ -116,7 +120,10 @@ All of the following data is entered by you and stored **only on your device**:
 - **Categories and budgets** — names, limits, periods.
 - **Savings goals** — names, target and saved amounts, deadlines.
 - **Bills and subscriptions** — names, amounts, due dates, reminder settings.
+- **Deposits and investments** — deposit terms (rates, terms, interest), assets, trades and prices you enter yourself.
+- **Exchange rates** — rates you set yourself or that are remembered from amounts you enter. Rates and prices are never downloaded from the internet.
 - **Debts and loans** — amount, due dates, and the **name of the person** you lent money to or borrowed from. Please only enter other people's information to the extent needed for your personal records.
+- **Pictures for categories and accounts** — images you pick yourself from Photos or Files. The App only receives the image you select, stores it downsized on your device, and includes it in JSON backups.
 - **Settings** — currency, theme, tab order, app icon, reminder and security preferences.
 
 We have no access to this data and do not collect or process it.
@@ -132,14 +139,15 @@ If "Save Location" is enabled, when you create a new transaction the App determi
 Used to lock the App. Biometric authentication is performed entirely by iOS — the App **never receives or stores** your biometric data; it only learns whether authentication succeeded. The App passcode is stored in the secure iOS Keychain on your device.
 
 **Notifications.**
-Used for local reminders about bills, debts, and budget limits. Notifications are created and scheduled on the device itself; no push servers are used.
+Used for local reminders about bills, debts and deposit maturity, and for alerts when spending reaches 80% of a budget or category limit and when a budget is exceeded. Notifications are created and scheduled on the device itself; no push servers are used.
 
 ### 4. Apple System Services
 
 Some features rely on standard operating system services provided by Apple:
 
 - **Place names (reverse geocoding).** To display a place name for a transaction's coordinates, iOS sends those coordinates to Apple's geocoding service. This happens only when location saving is enabled.
-- **Apple Maps.** If you tap a transaction's location, the coordinates are opened in the Maps app.
+- **Mini-map in a transaction.** If a transaction has a saved location, the App shows a small map using MapKit. To draw it, iOS loads map tiles from Apple for the area around those coordinates.
+- **Apple Maps.** If you tap "Open in Maps", the coordinates are opened in the Maps app.
 - **Device backups.** If iCloud Backup or computer backups are enabled on your device, App data may be included in those backups according to your device settings.
 
 Processing by these services is governed by [Apple's Privacy Policy](https://www.apple.com/legal/privacy/).
@@ -155,7 +163,7 @@ When importing, the App reads only the file you explicitly select.
 Data remains on your device until you delete it. You can:
 
 - delete individual records (transactions, accounts, categories, goals, debts, etc.) within the App;
-- delete **all** data by uninstalling the App.
+- delete **all** data by uninstalling the App. The passcode is kept in the iOS Keychain, which may persist after the App is removed; if you reinstall, the App deletes it automatically on first launch.
 
 Because we do not store your data, we cannot recover it if it is lost. We recommend creating backups regularly.
 
@@ -174,4 +182,3 @@ If changes to the App affect how data is handled, we will update this Policy and
 ### 10. Contact
 
 For privacy questions, contact: **taldybayevit@gmail.com**
-
